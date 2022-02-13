@@ -30,17 +30,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return 10000
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 200
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "theTableViewCell")!
-        cell.textLabel?.text = "\(indexPath)"
+//        cell.textLabel?.text = "\(indexPath)"
         
-        let theView = UIView(frame: CGRect(x: 10, y: 10, width: 200, height: 30))
-        theView.backgroundColor = UIColor.red
-        cell.addSubview(theView)
+//        let theView = UIView(frame: CGRect(x: 100, y: 100, width: 20, height: 30))
+//        theView.backgroundColor = UIColor.red
+//        cell.clipsToBounds = true
+//        cell.addSubview(theView)
         
         
         return cell

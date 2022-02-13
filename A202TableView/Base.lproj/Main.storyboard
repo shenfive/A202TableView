@@ -21,12 +21,27 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="theTableViewCell" id="TeR-MF-SlZ">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="theTableViewCell" rowHeight="100" id="TeR-MF-SlZ" customClass="ContentTableViewCell" customModule="A202TableView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TeR-MF-SlZ" id="scs-Ig-qfQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.grid.3x1.folder.fill.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Chm-ED-OCM">
+                                                    <rect key="frame" x="20" y="21" width="61.5" height="57.5"/>
+                                                    <color key="backgroundColor" red="0.84078937060000003" green="1" blue="0.69764934359999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="Kez-9i-kqS"/>
+                                                        <constraint firstAttribute="width" constant="60" id="YJJ-Fa-xUr"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Chm-ED-OCM" firstAttribute="leading" secondItem="scs-Ig-qfQ" secondAttribute="leading" constant="20" id="0pY-Q8-Ra6"/>
+                                                <constraint firstAttribute="bottom" secondItem="Chm-ED-OCM" secondAttribute="bottom" constant="20" id="E4I-co-gkc"/>
+                                                <constraint firstItem="Chm-ED-OCM" firstAttribute="top" secondItem="scs-Ig-qfQ" secondAttribute="top" constant="20" id="NlQ-f1-sqD"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -47,10 +62,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-13" y="36"/>
+            <point key="canvasLocation" x="-13.043478260869566" y="35.491071428571423"/>
         </scene>
     </scenes>
     <resources>
+        <image name="square.grid.3x1.folder.fill.badge.plus" catalog="system" width="128" height="91"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
