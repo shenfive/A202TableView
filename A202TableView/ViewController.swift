@@ -19,15 +19,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         myTableView.delegate = self
 
     }
-
+    
+    //MARK: TableView DataSource and Delegate
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return 10000
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+//        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "theTableViewCell")!
         cell.backgroundColor = UIColor.red
+        cell.textLabel?.text = "\(indexPath)"
         return cell
     }
 
