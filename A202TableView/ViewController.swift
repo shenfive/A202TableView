@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    
+    var contentList:[[String:String]] = []
 
     @IBOutlet weak var myTableView: UITableView!
     
@@ -20,39 +20,38 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     }
     
+    
+
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        contentList = (UserDefaults.standard.value(forKey: "contentList") as? [[String:String]]) ?? []
+        myTableView.reloadData()
+    
+        
+    }
+    
     //MARK: TableView DataSource and Delegate
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10000
+        return contentList.count
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 200
-//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "theTableViewCell") as! ContentTableViewCell
-//        cell.textLabel?.text = "\(indexPath)"
-        
-//        let theView = UIView(frame: CGRect(x: 100, y: 100, width: 20, height: 30))
-//        theView.backgroundColor = UIColor.red
-//        cell.clipsToBounds = true
-//        cell.addSubview(theView)
-        cell.nameLabel.text = "My Text"
-        cell.phone.text = "23939889"
+        cell.nameLabel.text = contentList[indexPath.row]["name"]
+        cell.phone.text = contentList[indexPath.row]["phone"]
         
         
         return cell
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("content view will appear")
-    }
+
 
 }
 

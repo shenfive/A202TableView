@@ -13,6 +13,9 @@ class AddContentViewController: UIViewController {
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var phoneTF: UITextField!
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     
     override func viewDidLoad() {
