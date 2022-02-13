@@ -9,6 +9,12 @@ import UIKit
 
 class AddContentViewController: UIViewController {
 
+    
+    @IBOutlet weak var nameTF: UITextField!
+    @IBOutlet weak var phoneTF: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,4 +26,25 @@ class AddContentViewController: UIViewController {
         print("add view will appear")
     }
 
+    @IBAction func addContentAction(_ sender: Any) {
+        
+        let name = nameTF.text ?? ""
+        let phone = phoneTF.text ?? ""
+        
+        if name.count <= 2 {
+            
+            let alertVC = UIAlertController(title: "至少輸入三個字元的名稱", message: nil, preferredStyle: .alert)
+            alertVC.addAction(UIAlertAction(title: "我知道了", style: .cancel))
+            self.present(alertVC, animated: true)
+            
+            
+            return
+        }
+        
+    }
+    
+    
+    
+    
+    
 }

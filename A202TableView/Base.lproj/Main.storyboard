@@ -130,12 +130,19 @@
                                 <color key="backgroundColor" red="0.84078937060000003" green="1" blue="0.69764934359999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="新增"/>
+                                <connections>
+                                    <action selector="addContentAction:" destination="0Bi-ia-tfv" eventType="touchUpInside" id="s39-LA-ry3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WSF-aI-p17"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="輸入新資料" image="pencil" catalog="system" id="wcR-9Q-fZ7"/>
+                    <connections>
+                        <outlet property="nameTF" destination="R0k-3j-Qfq" id="bfD-gu-vKw"/>
+                        <outlet property="phoneTF" destination="ttz-za-Cvn" id="1Xa-7w-SMF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygo-ta-Hj5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
