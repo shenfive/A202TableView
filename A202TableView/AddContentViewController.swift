@@ -32,19 +32,21 @@ class AddContentViewController: UIViewController {
         let phone = phoneTF.text ?? ""
         
         if name.count <= 2 {
-            
-            let alertVC = UIAlertController(title: "至少輸入三個字元的名稱", message: nil, preferredStyle: .alert)
-            alertVC.addAction(UIAlertAction(title: "我知道了", style: .cancel))
-            self.present(alertVC, animated: true)
-            
-            
+            showAlert(title: "至少輸入三碼名稱")
+            return
+        }
+        
+        if phone.count != 10 {
+            showAlert(title: "電話號碼至少應為十碼")
             return
         }
         
     }
-    
-    
-    
-    
-    
+}
+extension UIViewController{
+    func showAlert(title:String){
+        let alertVC = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "我知道了", style: .cancel))
+        self.present(alertVC, animated: true)
+    }
 }
