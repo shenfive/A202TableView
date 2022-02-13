@@ -36,8 +36,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "theTableViewCell")!
-//        cell.backgroundColor = UIColor.red
         cell.textLabel?.text = "\(indexPath)"
+        
+        let theView = UIView(frame: CGRect(x: 10, y: 10, width: 200, height: 30))
+        theView.backgroundColor = UIColor.red
+        cell.addSubview(theView)
+        
+        
         return cell
     }
 
