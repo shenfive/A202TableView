@@ -8,7 +8,10 @@
 import UIKit
 
 class ContentTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var phone: UILabel!
+    
+    @IBOutlet weak var headImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -35,13 +35,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "theTableViewCell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "theTableViewCell") as! ContentTableViewCell
 //        cell.textLabel?.text = "\(indexPath)"
         
 //        let theView = UIView(frame: CGRect(x: 100, y: 100, width: 20, height: 30))
 //        theView.backgroundColor = UIColor.red
 //        cell.clipsToBounds = true
 //        cell.addSubview(theView)
+        cell.nameLabel.text = "My Text"
+        cell.phone.text = "23939889"
         
         
         return cell
