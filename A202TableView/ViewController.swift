@@ -30,10 +30,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return 10000
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = UITableViewCell()
         let cell = tableView.dequeueReusableCell(withIdentifier: "theTableViewCell")!
-        cell.backgroundColor = UIColor.red
+//        cell.backgroundColor = UIColor.red
         cell.textLabel?.text = "\(indexPath)"
         return cell
     }
