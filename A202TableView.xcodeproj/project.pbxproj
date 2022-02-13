@@ -15,6 +15,7 @@
 		BAD5A81C27B89F10002CE50F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAD5A81A27B89F10002CE50F /* LaunchScreen.storyboard */; };
 		BAD5A82427B8AD50002CE50F /* ContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD5A82327B8AD50002CE50F /* ContentTableViewCell.swift */; };
 		BAD5A82627B8B7E0002CE50F /* AddContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD5A82527B8B7E0002CE50F /* AddContentViewController.swift */; };
+		BAD5A82827B8DDDD002CE50F /* utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD5A82727B8DDDD002CE50F /* utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BAD5A81D27B89F10002CE50F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAD5A82327B8AD50002CE50F /* ContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTableViewCell.swift; sourceTree = "<group>"; };
 		BAD5A82527B8B7E0002CE50F /* AddContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContentViewController.swift; sourceTree = "<group>"; };
+		BAD5A82727B8DDDD002CE50F /* utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				BAD5A81D27B89F10002CE50F /* Info.plist */,
 				BAD5A82327B8AD50002CE50F /* ContentTableViewCell.swift */,
 				BAD5A82527B8B7E0002CE50F /* AddContentViewController.swift */,
+				BAD5A82727B8DDDD002CE50F /* utility.swift */,
 			);
 			path = A202TableView;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAD5A82827B8DDDD002CE50F /* utility.swift in Sources */,
 				BAD5A81427B89F0F002CE50F /* ViewController.swift in Sources */,
 				BAD5A81027B89F0F002CE50F /* AppDelegate.swift in Sources */,
 				BAD5A82627B8B7E0002CE50F /* AddContentViewController.swift in Sources */,

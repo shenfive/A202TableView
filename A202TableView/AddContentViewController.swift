@@ -41,12 +41,23 @@ class AddContentViewController: UIViewController {
             return
         }
         
+        let content = ["name":name,"phone":phone]
+        
+        let userDefault  = UserDefaults.standard
+        
+        var contentList:[[String:String]] = (userDefault.value(forKey: "contentList") as? [[String:String]]) ?? []
+        contentList.append(content)
+        
+        userDefault.set(contentList, forKey: "contentList")
+        userDefault.synchronize()
+        
+        print(userDefault.value(forKey: "contentList") as! [[String:String]])
+        
+        phoneTF.text = ""
+        nameTF.text = ""
+        showAlert(title: "輸入成功")
+        
+        
     }
 }
-extension UIViewController{
-    func showAlert(title:String){
-        let alertVC = UIAlertController(title: title, message: nil, preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "我知道了", style: .cancel))
-        self.present(alertVC, animated: true)
-    }
-}
+
